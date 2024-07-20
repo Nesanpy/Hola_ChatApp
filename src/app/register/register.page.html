@@ -1,0 +1,37 @@
+<ion-content [fullscreen]="true">
+  <div class="container">
+    <div class="content">
+      <p>Hola</p>
+      <img src="assets/img/Logo.png" alt="logo" class="logo">
+    </div>
+  </div>
+
+  <div class="input-element">
+    <div>
+      <ion-input type="text" [(ngModel)]="usuario" (ngModelChange)="onUsuarioChange()"></ion-input>
+      <p class="text" [ngClass]="{'advertencia': usuarioExistente}">
+        {{ usuarioExistente ? 'El usuario ya está registrado' : 'Nombre de Usuario' }}
+      </p>
+    </div>
+    <div>
+      <ion-input type="text" [(ngModel)]="correo"></ion-input>
+      <p class="text">Correo Electrónico</p>
+    </div>
+    <div>
+      <ion-input type="text" [(ngModel)]="contrasenha"></ion-input>
+      <p class="text">Contraseña</p>
+    </div>
+  </div>
+
+  <div class="register-button">
+    <ion-button class="boton" shape="round" (click)="registrarUsuario()">
+      <p>Registrarse</p>
+    </ion-button>
+  </div>
+
+  <div class="login-option">
+    <p>¿Ya tenés una cuenta? <a href="/login">Iniciar Sesión</a></p>
+  </div>
+
+
+</ion-content>

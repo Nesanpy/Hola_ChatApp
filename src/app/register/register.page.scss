@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+}
+
+.container p {
+  font-size: 48px;
+  color: #009951;
+  margin-top: 110px;
+  margin-right: 8px;
+  margin-bottom: 110px;
+}
+
+.container img {
+  width: 38px;
+  height: auto;
+}
+
+.input-element ion-input {
+  font-family: 'Yusei Magic', sans-serif;
+  text-align: center;
+  border-bottom: 1.6px solid black;
+  width: 205px;
+  margin-left: auto;
+  margin-right: auto;
+  --highlight-color: #009951;
+}
+
+.text {
+  font-weight: 600;
+  text-align: center;
+  font-size: 12px;
+  color: rgba(44, 44, 44, 0.34);
+  margin-top: 3px;
+}
+
+ion-button {
+  color: black;
+  --background: #009951;
+}
+  
+.register-button {
+  padding-top: 177px;
+  display: flex;
+  justify-content: center;
+}
+  
+.register-button ion-button {
+  width: 165px;
+  color: black;
+}
+  
+.register-button p {
+  font-weight: bold;
+  font-size: 15px;
+  text-transform: capitalize;
+}
+
+.login-option {
+  text-align: center;
+  font-weight: 600;
+  font-size: 12px;
+  color: rgba(44, 44, 44, 0.34);
+}
+
+.advertencia {
+  color: #FF4C4C;
+  font-weight: 600;
+  text-align: center;
+  font-size: 12px;
+  margin-top: 3px;
+}
