@@ -7,25 +7,32 @@
 
   <div class="input-element">
     <div>
-      <ion-input type="text" [(ngModel)]="usuario" (ngModelChange)="onUsuarioChange()"></ion-input>
+      <ion-input type="text" [(ngModel)]="nuevoUsuario.usuario" (ngModelChange)="onUsuarioChange()"></ion-input>
       <p class="text" [ngClass]="{'advertencia': usuarioExistente}">
         {{ usuarioExistente ? 'El usuario ya está registrado' : 'Nombre de Usuario' }}
       </p>
     </div>
     <div>
-      <ion-input type="text" [(ngModel)]="correo"></ion-input>
+      <ion-input type="text" [(ngModel)]="nuevoUsuario.correo"></ion-input>
       <p class="text">Correo Electrónico</p>
     </div>
     <div>
-      <ion-input type="password" [(ngModel)]="contrasenha"></ion-input>
+      <ion-input type="password" [(ngModel)]="nuevoUsuario.contrasenha"></ion-input>
       <p class="text">Contraseña</p>
     </div>
   </div>
 
   <div class="botones">
+    @if (cargando) {
+      <div style="text-align: center;">
+        <ion-spinner name="bubbles"></ion-spinner>
+      </div>
+    }
+    
     <div class="boton">
-      <ion-button shape="round" --(click)="registrarUsuario()">Registrarse</ion-button>
+      <ion-button shape="round" (click)="guardar()">Registrarse</ion-button>
     </div>
+
     <div class="login-option">
       <p>¿Ya tenés una cuenta? <a href="/login">Iniciar Sesión</a></p>
     </div>
