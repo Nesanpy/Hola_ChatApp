@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+/*import { Injectable } from '@angular/core';
 import { DatabaseInitializationService } from './database.init.service';
 import { Statement, Database } from 'sql.js';
 
@@ -42,4 +42,4 @@ export class BrowserDatabaseService {
       throw new Error('Error al verificar la existencia del usuario.');
     }
   }
-}
+}*/

@@ -1,8 +1,7 @@
 <ion-content [fullscreen]="true">
   <div class="container">
     <div class="content">
-      <p>Hola</p>
-      <img src="assets/img/Logo.png" alt="logo" class="logo">
+      <img src="assets/img/Logotipo.png" alt="logotipo" class="logotipo">
     </div>
   </div>
 
@@ -18,20 +17,17 @@
       <p class="text">Correo Electrónico</p>
     </div>
     <div>
-      <ion-input type="text" [(ngModel)]="contrasenha"></ion-input>
+      <ion-input type="password" [(ngModel)]="contrasenha"></ion-input>
       <p class="text">Contraseña</p>
     </div>
   </div>
 
-  <div class="register-button">
-    <ion-button class="boton" shape="round" (click)="registrarUsuario()">
-      <p>Registrarse</p>
-    </ion-button>
+  <div class="botones">
+    <div class="boton">
+      <ion-button shape="round" --(click)="registrarUsuario()">Registrarse</ion-button>
+    </div>
+    <div class="login-option">
+      <p>¿Ya tenés una cuenta? <a href="/login">Iniciar Sesión</a></p>
+    </div>
   </div>
-
-  <div class="login-option">
-    <p>¿Ya tenés una cuenta? <a href="/login">Iniciar Sesión</a></p>
-  </div>
-
-
 </ion-content>

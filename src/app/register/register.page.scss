@@ -1,30 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
-
 .container {
   display: flex;
   justify-content: center;
-}
-
-.content {
-  display: flex;
   align-items: center;
 }
 
-.container p {
-  font-size: 48px;
-  color: #009951;
-  margin-top: 110px;
-  margin-right: 8px;
-  margin-bottom: 110px;
-}
-
-.container img {
-  width: 38px;
+.logotipo {
+  display: flex;
+  width: 40%;
+  max-width: 500px;
   height: auto;
+  margin: auto;
+  margin-top: 20%;
+  margin-bottom: 20%;
 }
 
 .input-element ion-input {
-  font-family: 'Yusei Magic', sans-serif;
   text-align: center;
   border-bottom: 1.6px solid black;
   width: 205px;
@@ -41,28 +31,6 @@
   margin-top: 3px;
 }
 
-ion-button {
-  color: black;
-  --background: #009951;
-}
-  
-.register-button {
-  padding-top: 177px;
-  display: flex;
-  justify-content: center;
-}
-  
-.register-button ion-button {
-  width: 165px;
-  color: black;
-}
-  
-.register-button p {
-  font-weight: bold;
-  font-size: 15px;
-  text-transform: capitalize;
-}
-
 .login-option {
   text-align: center;
   font-weight: 600;
@@ -76,4 +44,28 @@ ion-button {
   text-align: center;
   font-size: 12px;
   margin-top: 3px;
+}
+
+.botones {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.boton ion-button {
+  color: black;
+  --background: #009951;
+  min-width: 165px;
+  max-width: 165px;
+  font-weight: bold;
+  font-size: clamp(13px, 14px, 15px);
+  text-transform: capitalize;
+}
+
+.botones p {
+  font-size: clamp(12px, 13px, 14px);
 }

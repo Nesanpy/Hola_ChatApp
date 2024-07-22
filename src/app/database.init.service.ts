@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+/*import { Injectable } from '@angular/core';
 import * as initSqlJs from 'sql.js';
 import { SqlJsStatic, Database } from 'sql.js';
 
@@ -51,4 +51,4 @@ export class DatabaseInitializationService {
   getDatabase(): Database | undefined {
     return this.db;
   }
-}
+}*/

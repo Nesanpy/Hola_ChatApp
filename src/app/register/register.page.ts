@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonContent, IonHeader, IonTitle, IonToolbar, IonInput, IonButton } from '@ionic/angular/standalone';
-import { BrowserDatabaseService } from '../database.service';
+//import { BrowserDatabaseService } from '../database.service';
 
 
 @Component({
@@ -18,12 +18,12 @@ export class RegisterPage implements OnInit {
   contrasenha: string = '';
   usuarioExistente: boolean = false;
 
-  constructor(private dbService: BrowserDatabaseService) { }
+  constructor(/*private dbService: BrowserDatabaseService*/) { }
 
   ngOnInit() {
   }
 
-  async registrarUsuario() {
+  /*async registrarUsuario() {
     try {
         const existeUsuario = await this.dbService.usuarioExiste(this.usuario);
         if (existeUsuario) {
@@ -37,7 +37,7 @@ export class RegisterPage implements OnInit {
     } catch (error: any) {
         console.error('Error al insertar usuario:', error);
     }
-}
+  }*/
 
   onUsuarioChange() {
     this.usuarioExistente = false;
