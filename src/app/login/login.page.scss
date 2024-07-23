@@ -1,71 +1,69 @@
-@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
-
 .container {
   display: flex;
   justify-content: center;
-}
-
-.content {
-  display: flex;
   align-items: center;
 }
 
-.container p {
-  font-size: 48px;
-  color: #009951;
-  margin-top: 110px;
-  margin-right: 8px;
-  margin-bottom: 110px;
-}
-
-.container img {
-    width: 38px;
-    height: auto;
-}
-
-.input-element {
+.logotipo {
   display: flex;
-  flex-direction: column;
+  width: 40%;
+  max-width: 500px;
+  height: auto;
+  margin: auto;
+  margin-top: 20%;
+  margin-bottom: 20%;
 }
 
 .input-element ion-input {
-    font-family: 'Yusei Magic', sans-serif;
-    text-align: center;
-    border-bottom: 1.6px solid black;
-    width: 205px;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-    --highlight-color: #009951;
+  text-align: center;
+  border-bottom: 1.6px solid black;
+  width: 205px;
+  margin-left: auto;
+  margin-right: auto;
+  --highlight-color: #009951;
 }
 
 .text {
-    font-weight: 600;
-    text-align: center;
-    font-size: 12px;
-    color: rgba(44, 44, 44, 0.34);
-    margin-top: 3px;
+  font-weight: 600;
+  text-align: center;
+  font-size: 12px;
+  color: rgba(44, 44, 44, 0.34);
+  margin-top: 3px;
 }
 
-.login-button {
-  padding-top: 255px;
-  display: flex;
-  justify-content: center;
+.advertencia {
+  color: #FF4C4C;
+  font-weight: 600;
+  text-align: center;
+  font-size: 12px;
+  margin-top: 3px;
 }
-  
-.login-button ion-button {
-  width: 165px;
+
+.botones {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.boton ion-button {
   color: black;
   --background: #009951;
-}
-  
-.login-button p {
+  min-width: 165px;
+  max-width: 165px;
   font-weight: bold;
-  font-size: 15px;
+  font-size: clamp(13px, 14px, 15px);
   text-transform: capitalize;
 }
 
-.login-option {
+.botones p {
+  font-size: clamp(12px, 13px, 14px);
+}
+
+.register-option {
   text-align: center;
   font-weight: 600;
   font-size: 12px;

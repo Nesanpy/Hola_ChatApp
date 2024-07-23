@@ -2,16 +2,23 @@
   <div class="chat-header">
     <div class="rectangulo"></div>
     <div class="triangulo"></div>
-    <p class="encabezado">Chat Grupal 1</p>
+    <p class="encabezado">{{ chatTitle }}</p>
     <a href="/chat-rooms"><img src="assets/img/back.png" alt="back" class="back"></a>
-    <p class="logo-text">Hola</p>
-    <img src="assets/img/Logo.png" alt="logo" class="logo">
+    <img src="assets/img/Logotipo.png" alt="logo" class="logo">
   </div>
-  <div class="input-background">
+  
+  <div class="mensajes">
+    <ng-container *ngIf="mensajes$ | async as mensajes">
+      <div *ngFor="let mensaje of mensajes" class="mensaje">
+        <p>{{ mensaje.mensaje }}</p>
+      </div>
+    </ng-container>
+  </div>
+
+  <div class="input">
     <div class="input-chat">
-      <ion-input>
-      </ion-input>
+      <ion-input [(ngModel)]="mensaje" placeholder="Escribe un mensaje..."></ion-input>
     </div>
-    <a href=""><img src="assets/img/send.png" alt="send" class="send"></a>
+    <a (click)="sendMessage()"><img src="assets/img/send.png" alt="send" class="send"></a>
   </div>
 </ion-content>

@@ -124,6 +124,8 @@ ionicons/components
 
 ionicons/icons
 
+rxfire/firestore
+
 rxjs
 Apache-2.0
                                Apache License

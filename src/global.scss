@@ -4,3 +4,12 @@ body {
     color: white;
     font-family: 'Yusei Magic', sans-serif;
 }
+
+ion-content::part(scroll)::-webkit-scrollbar {
+    display: none;
+}
+    
+ion-content::part(scroll) {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}

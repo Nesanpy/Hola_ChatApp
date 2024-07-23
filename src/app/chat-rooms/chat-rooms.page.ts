@@ -32,4 +32,8 @@ export class ChatRoomsPage implements OnInit {
     }, 500);
   }
 
+  setChatTitle(title: string) {
+    localStorage.setItem('chatTitle', title);
+  }
+
 }

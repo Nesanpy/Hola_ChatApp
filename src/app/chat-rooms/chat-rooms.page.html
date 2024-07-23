@@ -3,15 +3,14 @@
     <div class="rectangulo"></div>
     <div class="triangulo"></div>
     <a href="/login"><img src="assets/img/log_out.png" alt="logout" class="logout"></a>
-    <p>Hola</p>
-    <img src="assets/img/Logo.png" alt="logo" class="logo">
+    <img src="assets/img/Logotipo.png" alt="logotipo" class="logotipo">
   </div>
 
   <div class="chats-grupales">
     <div class="lista">
       <ion-list>
           <ion-item *ngFor="let item of items; let index" class="elemento">
-            <a href="/chat">
+            <a href="/chat" (click)="setChatTitle(item)">
               <ion-label>{{ item }}</ion-label>
             </a>
           </ion-item>

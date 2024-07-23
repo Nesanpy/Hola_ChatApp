@@ -31,13 +31,6 @@
   margin-top: 3px;
 }
 
-.login-option {
-  text-align: center;
-  font-weight: 600;
-  font-size: 12px;
-  color: rgba(44, 44, 44, 0.34);
-}
-
 .advertencia {
   color: #FF4C4C;
   font-weight: 600;
@@ -68,4 +61,11 @@
 
 .botones p {
   font-size: clamp(12px, 13px, 14px);
+}
+
+.login-option {
+  text-align: center;
+  font-weight: 600;
+  font-size: 12px;
+  color: rgba(44, 44, 44, 0.34);
 }
