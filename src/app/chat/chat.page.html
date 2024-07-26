@@ -7,6 +7,14 @@
     <img src="assets/img/Logotipo.png" alt="logo" class="logo">
   </div>
   
+  @if (cargando) {
+    <div class="overlay">
+      <div class="spinner-container">
+        <ion-spinner name="bubbles"></ion-spinner>
+      </div>
+    </div>
+  }
+
   <div class="mensajes">
     <ng-container *ngIf="mensajes$ | async as mensajes">
       <div *ngFor="let mensaje of mensajes" class="mensaje">

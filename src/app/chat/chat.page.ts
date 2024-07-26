@@ -1,17 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar, IonInput, Platform } from '@ionic/angular/standalone';
+import { IonContent, IonHeader, IonTitle, IonToolbar, IonInput, Platform, IonSpinner } from '@ionic/angular/standalone';
 import { Keyboard } from '@capacitor/keyboard';
 import { Observable } from 'rxjs';
 import { FirestoreService } from '../common/services/firestore.service';
+import { waitForAsync } from '@angular/core/testing';
 
 @Component({
   selector: 'app-chat',
   templateUrl: './chat.page.html',
   styleUrls: ['./chat.page.scss'],
   standalone: true,
-  imports: [IonInput, IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule]
+  imports: [IonSpinner, IonInput, IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule]
 })
 export class ChatPage implements OnInit {
 
@@ -19,6 +20,7 @@ export class ChatPage implements OnInit {
   keyboardVisible: boolean = false;
   mensaje: string = '';
   mensajes$: Observable<any[]>;
+  cargando: boolean = false;
 
   constructor(private platform: Platform, private firestoreService: FirestoreService) { }
 
@@ -27,8 +29,7 @@ export class ChatPage implements OnInit {
     if (storedTitle) {
       this.chatTitle = storedTitle;
     }
-
-    this.mensajes$ = this.firestoreService.getMessages(this.chatTitle);
+    this.cargarMensajes();
 
     if (this.platform.is('hybrid')) {
       Keyboard.addListener('keyboardDidShow', (info) => {
@@ -41,6 +42,17 @@ export class ChatPage implements OnInit {
         document.body.style.setProperty('--keyboard-offset', `0px`);
       });
     }
+  }
+
+  async cargarMensajes() {
+    this.cargando = true;
+    await sleep(250);
+    try {
+      this.mensajes$ = this.firestoreService.getMessages(this.chatTitle);
+    } catch (error) {
+      console.error('Error al cargar mensajes', error);
+    }
+    this.cargando = false;
   }
 
   ngOnDestroy() {
@@ -60,5 +72,8 @@ export class ChatPage implements OnInit {
         });
     }
   }
+}
 
+function sleep(ms: number): Promise<void> {
+  return new Promise(resolve => setTimeout(resolve, ms));
 }
